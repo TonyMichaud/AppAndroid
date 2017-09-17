@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta charset=utf-8 />
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -37,16 +37,36 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div id="test" class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+    <header class="container">
+        <div class="row">
+            <h1>Bienvenue sur ton application</h1>
         </div>
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+    </header>
+
+    <section class="app">
+        <h1>babychou APP</h1>
+        <div id="deviceready">
+            <form class="form-horizontal">
+                <div class="form-group blink">
+                    <label class="control-label col-xs-6" for="nom">Nom</label>
+                    <input id="nom" class="col-xs-6" value="" placeholder="Petit nom">
+                </div>
+                <div class="form-group blink">
+                    <label class="control-label col-xs-6" for="password">Password</label>
+                    <input id="password" class="col-xs-6" type="password" value="" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-6 col-xs-10">
+                        <button id="submit" type="button" class="btn btn-default">Valider</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

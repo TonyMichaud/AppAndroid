@@ -45,6 +45,6 @@ var app = {
 
 app.initialize();
 
-$(document).on("click", "#test", function(){
-    alert("hyvgjvjh");
+$(document).on("click","#submit", function () {
+    window.location = $("#password").val() === "" && $("#nom").val() === "" ? "page1.html" : alert("Ce n'est pas le bon");
 });
